@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using close_and_cheap.BL;
 using close_and_cheap.Data.DTO;
 using close_and_cheap.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -15,6 +16,7 @@ namespace close_and_cheap.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService service;
+
         public UserController(IUserService service)
         {
             this.service = service;
@@ -57,6 +59,7 @@ namespace close_and_cheap.Controllers
             }
 
         }
+
         [AllowAnonymous]
         [HttpPost]
         public async Task<ActionResult> PostUser(UserDTO user)
@@ -136,6 +139,13 @@ namespace close_and_cheap.Controllers
 
         }
 
+        [HttpGet]
+        public List<string> GetRoute(MapTypesDTO mapTypes)
+        {
+            DijkstraLogic dijk = new DijkstraLogic();
+            List<string> list = dijk.GetMaslul(mapTypes.loc, mapTypes.Categories);
+            return list;
 
+        }
     }
 }

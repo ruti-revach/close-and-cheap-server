@@ -23,6 +23,15 @@
           "lib/netstandard1.5/Castle.Core.dll": {}
         }
       },
+      "GoogleMaps.LocationServices/1.2.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/GoogleMaps.LocationServices.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GoogleMaps.LocationServices.dll": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -2086,6 +2095,19 @@
           "ref/netstandard1.2/System.Threading.Timer.dll": {}
         }
       },
+      "System.Windows.Documents.Reporting/0.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/PdfSharp-WPF.dll": {},
+          "lib/net45/PdfSharp.Xps.dll": {},
+          "lib/net45/System.Windows.Documents.Reporting.dll": {}
+        },
+        "runtime": {
+          "lib/net45/PdfSharp-WPF.dll": {},
+          "lib/net45/PdfSharp.Xps.dll": {},
+          "lib/net45/System.Windows.Documents.Reporting.dll": {}
+        }
+      },
       "System.Windows.Extensions/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -2228,6 +2250,18 @@
         "lib/netstandard1.5/Castle.Core.dll",
         "lib/netstandard1.5/Castle.Core.xml",
         "readme.txt"
+      ]
+    },
+    "GoogleMaps.LocationServices/1.2.0.5": {
+      "sha512": "0j3RL5+acxYgQNz72JdXJ1nUKxMGaY+6UvrOIOxZfp0qpJOUmo/ivCAm53atbnuy0z3vrZK+j9mZifh35UBqag==",
+      "type": "package",
+      "path": "googlemaps.locationservices/1.2.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "googlemaps.locationservices.1.2.0.5.nupkg.sha512",
+        "googlemaps.locationservices.nuspec",
+        "lib/netstandard2.0/GoogleMaps.LocationServices.dll"
       ]
     },
     "Humanizer.Core/2.8.26": {
@@ -7256,6 +7290,25 @@
         "system.threading.timer.nuspec"
       ]
     },
+    "System.Windows.Documents.Reporting/0.3.0": {
+      "sha512": "GCLWl0CBE5zKmp8VhPayCeEsl1c4TwT7dyn50lRVIsjcIWJE/3A+V5oX8Kb7OAGos4impnGHNirh4dRXSh5Awg==",
+      "type": "package",
+      "path": "system.windows.documents.reporting/0.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.txt",
+        "lib/net45/PdfSharp-WPF.dll",
+        "lib/net45/PdfSharp-WPF.xml",
+        "lib/net45/PdfSharp.Xps.dll",
+        "lib/net45/PdfSharp.Xps.xml",
+        "lib/net45/System.Windows.Documents.Reporting.XML",
+        "lib/net45/System.Windows.Documents.Reporting.dll",
+        "lib/net45/System.Windows.Documents.Reporting.pdb",
+        "system.windows.documents.reporting.0.3.0.nupkg.sha512",
+        "system.windows.documents.reporting.nuspec"
+      ]
+    },
     "System.Windows.Extensions/4.7.0": {
       "sha512": "CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "type": "package",
@@ -7532,13 +7585,15 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "GoogleMaps.LocationServices >= 1.2.0.5",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.8",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.6",
       "Microsoft.EntityFrameworkCore >= 5.0.9",
       "Microsoft.EntityFrameworkCore.Proxies >= 5.0.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.9",
-      "Newtonsoft.Json >= 13.0.1"
+      "Newtonsoft.Json >= 13.0.1",
+      "System.Windows.Documents.Reporting >= 0.3.0"
     ]
   },
   "packageFolders": {
@@ -7585,6 +7640,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "GoogleMaps.LocationServices": {
+            "target": "Package",
+            "version": "[1.2.0.5, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[3.1.8, )"
@@ -7614,6 +7673,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.1, )"
+          },
+          "System.Windows.Documents.Reporting": {
+            "target": "Package",
+            "version": "[0.3.0, )"
           }
         },
         "imports": [
@@ -7637,5 +7700,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Windows.Documents.Reporting 0.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "System.Windows.Documents.Reporting",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
