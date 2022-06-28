@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "label": "נעלי נשים",
+    "name": "Women's shoes"
+  },
+  {
+    "id": 2,
+    "name": "kids shoes",
+    "label": "נעלי ילדים"
+  },
+  {
+    "id": 3,
+    "label": "נעלי גברים",
+    "name": "men shoes"
+
+  },
+  {
+    "id": 4,
+    "label": "בגדי ילדים",
+    "name": "Children's clothing"
+
+  },
+  {
+    "id": 5,
+    "label": "מסעדות",
+    "name": "Restaurants"
+
+  },
+  {
+    "id": 6,
+    "label": "רהיטים",
+    "name": "furniture"
+
+  },
+  {
+    "id": 7,
+    "label": "בגדי גברים",
+    "name": "men clothes"
+
+  },
+  {
+    "id": 8,
+    "label": "תכשיטים",
+    "name": "jewelry"
+
+  },
+  {
+    "id": 9,
+    "label": "איפור",
+    "name": "Makeup"
+
+  },
+  {
+    "id": 10,
+    "label": "חיות מחמד",
+    "name": "Pets"
+
+  },
+  {
+    "id": 11,
+    "label": "אקססורייז",
+    "name": "Accessories"
+
+  }
+]
